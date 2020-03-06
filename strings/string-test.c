@@ -2,15 +2,14 @@
 #include<string.h>
 int main()
 {
-	char *main, *rep, *new,*token;
-	main ="hello-how-are-you-how-dod-you-are";
+	char *rep, *new,*token;
+	char main[] ="hello how are you how do you are";
 	printf("%s\n",main);
-	token = strtok(main,"-");
-	printf("%s\n",token);
+	token = strtok(main," ");
 	while(token!=NULL)
 	{
 		printf("%s\n",token);
-		token = strtok(NULL,"-");
+		token = strtok(NULL," ");
 	}
 	return 0;
 }
